@@ -1,16 +1,26 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-    container: {
+    btnClickContain: {
+        flexDirection: "row",
+        padding: 5,
+        marginTop: 5,
+        marginBottom: 5
+    },
+    btnContainer: {
         flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
+        flexDirection: "row",
+        alignItems: "flex-start"
     },
-    text: {
-        fontSize: 20,
-        fontWeight: 'bold',
+    btnIcon: {
+        height: 25,
+        width: 25
     },
-})
+    btnText: {
+        fontSize: 16,
+        marginLeft: 10,
+        marginTop: 2
+    }
+});
 
 export default styles;
