@@ -1,9 +1,9 @@
 import React, { useLayoutEffect } from 'react';
 import { FlatList, View, Text, TouchableHighlight, Image } from 'react-native';
 import styles from './HomeScreen.style'
-// import { recipes } from '../../data/dataArrays';
+import {recipes} from "../../data/dataArrays";
 import MenuImage from "../../components/MenuImage/MenuImage";
-// import { getCategoriesName } from "../../data/MockDataAPI";
+import { getCategoryName } from "../../data/MockDataAPI";
 
 export default function HomeScreen(props) {
     const { navigation } = props;
@@ -30,7 +30,7 @@ export default function HomeScreen(props) {
             <View style={styles.container}>
                 <Image style={styles.photo} source={{ uri: item.photo_url }} />
                 <Text style={styles.title}>{item.title}</Text>
-                <Text style={styles.category}>{getCategoriesName(item.categoryId)}</Text>
+                <Text style={styles.category}>{getCategoryName(item.categoryId)}</Text>
             </View>
         </TouchableHighlight>
     );
